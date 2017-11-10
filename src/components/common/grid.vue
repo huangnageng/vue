@@ -6,7 +6,7 @@
         <img class="grid-icon" src="../../assets/icons.png" alt="">
         <div class="grid-dec">
           <div class="dec-title">{{item.name}}</div>
-          <div class="dec-content"><i>{{item.count}}</i><img class="sm-icon" src="../../assets/game_icon.png" alt=""></div>
+          <div class="dec-content"><i>{{parseInt(Math.random() * 70000 + 20000)}}</i><img class="sm-icon" src="../../assets/game_icon.png" alt=""></div>
           
         </div>
       </a>
@@ -17,6 +17,8 @@
 <script>
 export default {
   name: 'Grid',
+  computed: {
+  },
   props: {
     modeTitle: {
       default: ''
