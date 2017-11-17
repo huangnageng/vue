@@ -6,6 +6,12 @@ export default {
     Loading
   },
   created () {
+    // 用户7天内是否已经上过该网站
+    if (!this.getCookie('customer')) {
+      this.setCookie('customer', 'customer', 7 * 24 * 3600)
+    } else {
+      this.userCookie = true
+    }
     var htmlEl = document.documentElement
     var momentWith = 0
     function setHtmlFontSize (designWidth, maxWidth) {
@@ -16,9 +22,12 @@ export default {
     window.addEventListener('resize', function () {
       setHtmlFontSize(1080, 1080)
     }, false)
+    this.paramObj = this.getQueryObject()
   },
   data () {
     return {
+      paramobj: {},
+      userCookie: false
     }
   },
   methods: {

@@ -38,7 +38,6 @@ export default {
     XHeader, ViewBox, CmmGrid
   },
   created () {
-    this.params = this.getQueryObject()
     this.modeRequire()
   },
   computed: {
@@ -48,7 +47,6 @@ export default {
   },
   data () {
     return {
-      params: {},
       title: 'You May Also Like',
       titleSec: 'Top Games',
       list: [
@@ -69,35 +67,13 @@ export default {
           avatar: '../../assets/icons.png',
           name: 'Family Guy',
           count: 31821
-        },
-        {
-          url: '/module/home.html?id=4',
-          avatar: '../../assets/icons.png',
-          name: 'Family Guy',
-          count: 31821
-        },
-        {
-          url: '/module/home.html?id=5',
-          avatar: '../../assets/icons.png',
-          name: 'Family Guy',
-          count: 31821
-        },
-        {
-          url: '/module/home.html?id=6',
-          avatar: '../../assets/icons.png',
-          name: 'Family Guy',
-          count: 31821
-        },
-        {
-          url: '/module/home.html?id=7',
-          avatar: '../../assets/icons.png',
-          name: 'Family Guy',
-          count: 31821
         }
       ]
     }
   },
   mounted () {
+    //  获取链接数据
+    console.log(this.paramObj)
     let queNum = document.querySelectorAll('.adsbygoogle').length
     for (var i = 0; i < queNum; i++) {
       (window.adsbygoogle = window.adsbygoogle || []).push({})

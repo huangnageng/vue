@@ -92,27 +92,25 @@ export default {
           margin-top: .3rem;
         }
         
-        .dec-title {
-          
+        .dec-title { 
           flex: 0 0 auto;
           white-space: nowrap;
           width:100%;
           text-align: center;
-          font-size: .3rem;
+          font-size: .4rem;
           overflow: hidden;
           text-overflow: ellipsis;
         }
         .dec-content {
           text-align: center;
           color: #707070;
-          font-size: .28rem;
-
+          font-size: .32rem;
+          margin-top: .08rem;
           & > img {
              width: .44rem;
              height: .4rem;
              margin-left: .1rem;
              position: relative;
-             top: .08rem;
           }
         }
 

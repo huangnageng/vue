@@ -4,7 +4,7 @@
   <loading v-show="loading"></loading>
     <x-header class="header-title">
       <div slot="overwrite-left" class="header-content" @click="back">
-        <i class="iconfont">&#xe621;</i>
+        <i class="iconfont back-icon">&#xe621;</i>
         <span class="mode-title">Game Title</span>
       </div>
     </x-header>
@@ -37,10 +37,10 @@ export default {
     XHeader, ViewBox, CmmGrid, modeTpl
   },
   created () {
-    this.params = this.getQueryObject()
-    console.log(this.params)
   },
   mounted () {
+    //  获取链接数据
+    console.log(this.paramObj)
     let queNum = document.querySelectorAll('.adsbygoogle').length
     for (var i = 0; i < queNum; i++) {
       (window.adsbygoogle = window.adsbygoogle || []).push({})
@@ -125,7 +125,13 @@ export default {
   .header-title {
     .vux-header-left {
       top: .45rem !important;
+      @media screen and (min-width:768px) {
+        top: .6rem !important;
+      }
       left: .25rem !important;
+    }
+    .back-icon {
+      font-size: .6rem;
     }
   }
   .header-content {

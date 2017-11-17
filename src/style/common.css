@@ -42,7 +42,7 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Microsoft YaHei', Helvetica, Arial, sans-serif, 'Avenir';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2b2b2b;
@@ -75,6 +75,7 @@ li {
 }
 .ads-box {
   margin: .4rem  0;
+  background: url(https://ss3.baidu.com/-rVXeDTa2gU2pMbgoY3K/it/u=1006344302,1731187403&fm=202&gp=0.jpg&w_h=121_75&cs=1006344302,1731187403&ow_h=121_75&src=801&mola=new&crop=v1) center;
   text-align: center;
 }
 .weui-toast {

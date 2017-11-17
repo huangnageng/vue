@@ -115,6 +115,8 @@ export default {
   }
   .tpl-tipText {
     padding: .2rem;
+    padding-top: 0;
+    margin-top: -.15rem;
     line-height: .55rem;
     font-size: .4rem;
     text-align: center;
@@ -132,8 +134,10 @@ export default {
     }
   }
   .play-content {
-    padding: .2rem 0;
+    padding: 0;
+    padding-bottom: .2rem;
     .play-title {
+      margin-top: -.15rem;
       line-height: .8rem;
       font-size: .5rem;
     }
