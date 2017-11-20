@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title> Spy Chase </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=320, height=440, user-scalable=no, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="game-slug" content="spy-chase">
+<meta name="splashscreen-game-url" content="http://d1bjj4kazoovdg.cloudfront.net/assets/games/spy-chase/teaser.jpg">
+<meta name="splashscreen-big-game-url" content="http://d1bjj4kazoovdg.cloudfront.net/assets/games/spy-chase/teaser@2x.jpg">
+<meta name="description" content="Race through multiple full colour terrains in your super-charged FBI car and capture the spies before they escape across the border. Look out overhead for bombing helicopters and keep your eyes out for other cars and obstacles on the road. Hint, smash in to the other cars to wipe them out. Playable using the mouse on desktop or touch screen on mobile phones.">
+<meta name="keywords" content="racing, highway, car, escape, FBI">
+<meta name="game-id" content="25">
+<meta name="supports-ad-play-button" content="false">
+	<link rel="apple-touch-startup-image" href="iphonestartup.png">
+	<link rel="stylesheet" type="text/css" href="iphone.css" media="only screen and (max-width: 480px)">
+	<link rel="stylesheet" type="text/css" href="desktop.css" media="screen and (min-width: 481px)">
+	<link rel="apple-touch-icon" href="appleicon.png">
+	<link rel="icon" type="image/JPG" href="favicon.jpg">
+	<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="explorer.css" media="all" />
+	<![endif]-->
+
+    
+    <style>#sg-loadscrn{
+    position:fixed; top:0;left:0;width:100%; height:100%; background-color:#fff; z-index:9999;
+}
+
+#sg-spinner{
+	position: absolute; width: 150px; height: 50px; top:50%; left:50%; margin-top:-25px; margin-left:-75px;
+	background-image: url('https://d3ktldhyer9fya.cloudfront.net/assets/sg-loader.gif');
+}
+
+#sg-spinner.no-img{
+    background: #ffffff;
+}
+
+#sg-loadtext{
+    position:absolute;
+    font-family: sans-serif;
+    top:50%; left:50%;
+    width: 250px;
+    margin-left:-125px;
+    margin-top:-125px;
+    text-align:center;
+    line-height:150%;
+    font-size:16px;
+}</style>
+    <script type="text/javascript" src="./assets/sg.hooks.js"></script>
+    <script type="text/javascript" src="./softgames_game.js"></script>
+    <script type="text/javascript">
+        window.gameLangs = ['en','es'];
+        window.gameJS = ['softgames_game.js'];
+        window.gameOnLoadScript = "init();";
+    </script>
+
+</head>
+<body onkeydown="scanInput(event);" onkeyup="stopMove(event);" style="background-color:#000000; text-align:center">
+
+		<canvas id="canvas" width="320" height="460"></canvas>
+		<div id="banad"></div>
+		<div id="console"></div>
+</body>
+    <script type="text/javascript" src="./assets/softgames-1.1.js"></script>
+
+</html>

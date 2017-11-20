@@ -1,0 +1,12 @@
+﻿{
+	"params": [
+		{ "addtype": 0, "addval": 1, "max": 20, "rewt": 0, "rewval":  1000 },
+		{ "addtype": 1, "addval": 5, "max": 1000, "rewt": 0, "rewval":  30 },
+		{ "addtype": 1, "addval": 3, "max": 3000, "rewt": 0, "rewval":  30 },
+		{ "addtype": 1, "addval": 4, "max": 1000000, "rewt": 1, "rewval":  1 },
+		{ "addtype": 1, "addval": 3, "max": 60, "rewt": 0, "rewval":  50 },
+		{ "addtype": 0, "addval": 2, "addtype2": 0, "addval2": 1, "max": 200, "max2": 6, "rewt": 0, "rewval":  50 },
+		{ "addtype": 0, "addval": 5, "max": 300, "rewt": 1, "rewval":  1 },
+		{ "addtype": 0, "addval": 0, "max": 1, "rewt": 1, "rewval":  1 }
+	]
+}

@@ -1,0 +1,21 @@
+<font>
+  <info face="grilled_cheese" size="30" bold="0" italic="0" charset="" unicode="" stretchH="100" smooth="1" aa="1" padding="1,1,1,1" spacing="0,0" outline="0"/>
+  <common lineHeight="41" base="22" scaleW="512" scaleH="32" pages="1" packed="0"/>
+  <pages>
+    <page id="0" file="grilled_cheese.png"/>
+  </pages>
+  <chars count="11">
+    <char id="48" x="3" y="1" width="28" height="30" xoffset="-4" yoffset="1" xadvance="21" page="0" chnl="15"/>
+    <char id="49" x="44" y="2" width="14" height="29" xoffset="-3" yoffset="1" xadvance="8" page="0" chnl="15"/>
+    <char id="50" x="73" y="1" width="25" height="30" xoffset="-4" yoffset="0" xadvance="18" page="0" chnl="15"/>
+    <char id="51" x="107" y="1" width="25" height="31" xoffset="-4" yoffset="0" xadvance="17" page="0" chnl="15"/>
+    <char id="52" x="140" y="2" width="27" height="29" xoffset="-5" yoffset="1" xadvance="19" page="0" chnl="15"/>
+    <char id="53" x="175" y="1" width="25" height="30" xoffset="-3" yoffset="1" xadvance="19" page="0" chnl="15"/>
+    <char id="54" x="208" y="1" width="26" height="30" xoffset="-4" yoffset="1" xadvance="19" page="0" chnl="15"/>
+    <char id="55" x="243" y="2" width="24" height="28" xoffset="-4" yoffset="2" xadvance="16" page="0" chnl="15"/>
+    <char id="56" x="277" y="1" width="25" height="30" xoffset="-4" yoffset="1" xadvance="18" page="0" chnl="15"/>
+    <char id="57" x="310" y="2" width="27" height="29" xoffset="-5" yoffset="1" xadvance="19" page="0" chnl="15"/>
+    <char id="109" x="341" y="4" width="33" height="25" xoffset="-3" yoffset="6" xadvance="27" page="0" chnl="15"/>
+    <char id="32" x="0" y="0" width="0" height="0" xoffset="-3" yoffset="6" xadvance="10" page="0" chnl="15"/>
+  </chars>
+</font>

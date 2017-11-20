@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <title>Bombs And Zombie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/JPG" href="favicon.jpg">
+    <link rel="icon" type="image/GIF" href="https://d3ktldhyer9fya.cloudfront.net/bombs-and-zombie/icons/icon57x57.png">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="full-screen" content="yes">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+<meta name="game-slug" content="bombs-and-zombie">
+<meta name="splashscreen-game-url" content="http://d1bjj4kazoovdg.cloudfront.net/assets/games/bombs-and-zombie/teaser.jpg">
+<meta name="splashscreen-big-game-url" content="http://d1bjj4kazoovdg.cloudfront.net/assets/games/bombs-and-zombie/teaser@2x.jpg">
+<meta name="description" content="Defend your village against zombie hordes using bombs, springs and shields! Earn money during each level and invest it wisely to buy new weapons and armor. Will you be able to stop the invasion?">
+<meta name="keywords" content>
+
+<style>
+   html,body{
+     
+     width: 100%;
+     height: 100%;
+
+   }</style><style type="text/css">.spinner {
+            position: fixed;
+            top: 60%;
+            left: 50%;
+            width: auto;
+            height: auto;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .spinner>div {
+            width: 18px;
+            height: 18px;
+            background-color: #333;
+
+            border-radius: 100%;
+            display: inline-block;
+            -webkit-animation: sk-bouncedelay 0.7s infinite ease-in-out both;
+            animation: sk-bouncedelay 0.7s infinite ease-in-out both;
+        }
+
+        .spinner .bounce1 {
+            -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s;
+        }
+
+        .spinner .bounce2 {
+            -webkit-animation-delay: -0.08s;
+            animation-delay: -0.08s;
+        }
+ @-webkit-keyframes sk-bouncedelay {
+            0%,
+            80%,
+            100% {
+                -webkit-transform: scale(0)
+            }
+            40% {
+                -webkit-transform: scale(1.0)
+            }
+        }
+
+        @keyframes sk-bouncedelay {
+            0%,
+            80%,
+            100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            40% {
+                -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+            }
+        }
+
+    </style>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-104413806-9', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script type="text/javascript">
+            window.gameLangs = ['en','de','es','ru','fr','it','tr','pt'];
+            window.gameJS = ['softgames_game.js'];
+            window.gameOnLoadScript = "initSoftgames();";
+        </script>
+<script type="text/javascript" src="./assets/sg.hooks.js"></script>
+    <style>
+        body, canvas, div {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+<canvas id="gameCanvas" width="640" height="880"></canvas>
+<div class="spinner" id='loadingView' style="display: block;">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+<script type="text/javascript" src="./assets/softgames-1.1.js"></script>
+<script type="text/javascript" src="softgames_game.js"></script>
+</body>
+</html>

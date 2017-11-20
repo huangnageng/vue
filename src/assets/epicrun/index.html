@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+	
+	<title>Epic Run</title>
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="game-slug" content="epic-run">
+<meta name="splashscreen-game-url" content="http://d1bjj4kazoovdg.cloudfront.net/assets/games/epic-run/teaser.jpg">
+<meta name="splashscreen-big-game-url" content="http://d1bjj4kazoovdg.cloudfront.net/assets/games/epic-run/teaser@2x.jpg">
+<meta name="description" content="Time for a legendary runner: Epic Run!
+
+Get ready to have the most epic run! Get an exhilarating running, escape deadly traps and shifts and make your way to victory in this amazingly addictive runner!
+
+Enjoy this fast-paced skill game with amazing graphics! Be careful, it is easy to play but hard to master! If you are ready for a fun challenge in a mysterious island, Epic Run is tailored for you! Do not worry, you will get plenty of support with gifts and boosters along the way! How far can you run?
+
+Compete with your friends and family with your best score whipping your way through the challenging obstacles! Time for an Epic Run!">
+<meta name="keywords" content>
+	<link rel="icon" type="image/GIF" href="icon.ico">
+    <link rel="apple-touch-icon" href="icon_60x60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon_76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon_120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon_152x152.png">
+	<style>
+		html,body { margin: 0; padding: 0; height: 100%;}
+		#openfl-content {width: 100%; height: 100%; }
+		
+		@font-face {
+			font-family: 'Impact';
+			src: url('Assets/general/fonts/impact.eot');
+			src: url('Assets/general/fonts/impact.eot?') format('embedded-opentype'),
+			url('Assets/general/fonts/impact.svg') format('svg'),
+			url('Assets/general/fonts/impact.woff') format('woff'),
+			url('Assets/general/fonts/impact.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+	</style>
+
+	<style>#sg-loadscrn{
+    position:fixed; top:0;left:0;width:100%; height:100%; background-color:#fff; z-index:9999;
+}
+
+#sg-spinner{
+	position: absolute; width: 150px; height: 50px; top:50%; left:50%; margin-top:-25px; margin-left:-75px;
+	background-image: url('https://d3ktldhyer9fya.cloudfront.net/assets/sg-loader.gif');
+}
+
+#sg-spinner.no-img{
+    background: #ffffff;
+}
+
+#sg-loadtext{
+    position:absolute;
+    font-family: sans-serif;
+    top:50%; left:50%;
+    width: 250px;
+    margin-left:-125px;
+    margin-top:-125px;
+    text-align:center;
+    line-height:150%;
+    font-size:16px;
+}</style>
+<style type="text/css">.spinner {
+            position: fixed;
+            top: 60%;
+            left: 50%;
+            width: auto;
+            height: auto;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .spinner>div {
+            width: 18px;
+            height: 18px;
+            background-color: #333;
+
+            border-radius: 100%;
+            display: inline-block;
+            -webkit-animation: sk-bouncedelay 0.7s infinite ease-in-out both;
+            animation: sk-bouncedelay 0.7s infinite ease-in-out both;
+        }
+
+        .spinner .bounce1 {
+            -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s;
+        }
+
+        .spinner .bounce2 {
+            -webkit-animation-delay: -0.08s;
+            animation-delay: -0.08s;
+        }
+ @-webkit-keyframes sk-bouncedelay {
+            0%,
+            80%,
+            100% {
+                -webkit-transform: scale(0)
+            }
+            40% {
+                -webkit-transform: scale(1.0)
+            }
+        }
+
+        @keyframes sk-bouncedelay {
+            0%,
+            80%,
+            100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+            40% {
+                -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+            }
+        }
+
+    </style>
+  <script type="text/javascript">
+     
+     var pageLoadTime = new Date().getTime();
+
+     function uploadPageLoadTime (){
+      var time= parseInt(((new Date().getTime())-pageLoadTime)/1000.0);
+      console.log("介绍页加载完成了:"+time+"s");
+       ga('send', 'event', {
+          eventCategory: '介绍页',
+          eventAction: '加载完成',
+          eventLabel: time
+  });
+
+     };
+
+  </script>
+
+    <script type="text/javascript" src="./script/soundjs-0.6.2.min.js">
+        window.gameLangs = ['en', 'de', 'es', 'fr', 'it', 'pt', 'ru', 'tr', 'nl', 'pl']; //langs added
+        window.gameJS = ['./script/soundjs-0.6.2.min.js', './script/Epic_Run.js'];
+        window.gameOnLoadScript = "startGame();";
+    </script>
+    <script type="text/javascript" src ="./script/sg.hooks.js"></script>    
+<script id="sg-loader-script" type="text/javascript">
+    </script>
+<script type="text/javascript" src ="./script/Epic_Run.js"></script>
+     <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-104413806-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body onload="uploadPageLoadTime();">
+<div id="openfl-content" style="position: absolute;"></div>
+ <div class="spinner" id='loadingView' style="display: none;">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+
+<div id="intContainer" style="background:#ffffff;display: block;height:100%;margin: 0;position: absolute;">
+  <div id="topContainer" style="background: #ffffff;display: block;height: 113px;margin: 0;">
+    
+    <img src="resource/img/icon.png" width="80px" height="80px" style="margin-top: 20px;margin-left:15px;float: left;"/>
+    <div style="float: left;display: block;margin-left: 15px;margin-top: 20px;">
+            <p style="">Epic Run</p>
+            <div>
+           
+           <img src="resource/img/start1.png" width="14.5px" height="14.5px" />
+           <img src="resource/img/start1.png" width="14.5px" height="14.5px"/>
+
+           <img src="resource/img/start1.png" width="14.5px" height="14.5px" />
+
+           <img src="resource/img/start1.png" width="14.5px" height="14.5px"/>
+
+           <img src="resource/img/start3.png" width="14.5px" height="14.5px"/>
+
+
+          </div>
+    </div>
+    
+  </div>
+
+  <div style="text-align: center;">
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- EpicRun_desc_banner1_320x100 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:100px"
+     data-ad-client="ca-pub-3545063517335060"
+     data-ad-slot="9527245431"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  </div>
+
+  <div id="playContainer" style="background:#0f9d58;display: block;height:50px;line-height:50px;text-align: center;margin-top:10px;margin-bottom: 10px;margin-left: 20px;margin-right: 20px;border-radius:5px;" onclick="document.getElementById('intContainer').style.display='none';document.getElementById('loadingView').style.display='block';runGame();">
+
+      <font color="#ffffff">Play Now</font>
+  </div>
+  <div style="text-align: center;">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- EpicRun_desc_banner2_320x100 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:100px"
+     data-ad-client="ca-pub-3545063517335060"
+     data-ad-slot="7093541836"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+  </div>
+
+  <div id="title" style="background:#ffffff;display: block;text-align: center;height: 20px;line-height: 20px;margin-top: 10px;">
+    
+      <font color="#2b2b2b">Time for a legendary runner: Epic Run!</font>    
+  </div>
+
+  <div id="previewContainer1" style="background:#ffffff;display: block;margin-top: 15px;">
+    
+    <div style="margin-left: 25px;margin-right: 25px;">
+    <img src="resource/img/preview1.png" width="100%" height="100%"/>
+    
+    <img src="resource/img/preview2.png" width="100%" height="100%"/>
+    </div>
+  </div>
+  <div style="text-align: center;">
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- EpicRun_desc_banner3_320x100 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:100px"
+     data-ad-client="ca-pub-3545063517335060"
+     data-ad-slot="3154296822"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  </div>
+  <div id="textContainer" style="background:#ffffff;display: block;margin-left: 30px;margin-right: 25px;">
+    <p style="color: #2b2b2b;">How to Play</p>
+    <div>
+      
+<p style="color: #585858;text-align:justify">Get ready to have the most epic run! Get an exhilarating running, escape deadly traps and shifts and make your way to victory in this amazingly addictive runner!
+Enjoy this fast-paced skill game with amazing graphics! Be careful, it is easy to play but hard to master! If you are ready for a fun challenge in a mysterious island, Epic Run is tailored for you! Do not worry, you will get plenty of support with gifts and boosters along the way! How far can you run?</p>
+
+    </div>
+    
+    
+  </div>
+  <div style="text-align: center;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- EpicRun_desc_banner4_320x100 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:100px"
+     data-ad-client="ca-pub-3545063517335060"
+     data-ad-slot="3700203682"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  </div>
+  
+</div> 
+   </body>
+
+</html>

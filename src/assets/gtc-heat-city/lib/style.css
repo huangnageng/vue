@@ -1,0 +1,13 @@
+body {
+	overflow:hidden;
+	padding:0px;
+	margin:0px;
+	text-align:center;
+	overflow: hidden;
+}
+
+#full {
+	position:fixed;
+	top:0px;
+	left:0px
+}

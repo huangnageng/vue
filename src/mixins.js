@@ -7,10 +7,11 @@ export default {
   },
   created () {
     // 用户7天内是否已经上过该网站
-    if (!this.getCookie('customer')) {
-      this.setCookie('customer', 'customer', 7 * 24 * 3600)
-    } else {
+    if (this.getCookie('customer')) {
       this.userCookie = true
+      this.cookieData = JSON.parse(this.getCookie('customer'))
+    } else {
+      this.setCookie('customer', [], 7 * 24 * 3600)
     }
     var htmlEl = document.documentElement
     var momentWith = 0
@@ -27,7 +28,8 @@ export default {
   data () {
     return {
       paramobj: {},
-      userCookie: false
+      userCookie: false,
+      cookieData: []
     }
   },
   methods: {

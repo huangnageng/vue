@@ -2,12 +2,11 @@
   <div class="grid-box">
     <div class="grid-title">{{modeTitle}}</div>
     <div class="grid-content">
-      <a class="grid-a" :href="item.url" v-for="(item, index) in modeList">
-        <img class="grid-icon" src="../../assets/icons.png" alt="">
+      <a class="grid-a" @click="resetCookie($event,item)" :data-href="item.clickUrl" v-for="(item, index) in modeList">
+        <img class="grid-icon" :src="item.icon" alt="">
         <div class="grid-dec">
           <div class="dec-title">{{item.name}}</div>
-          <div class="dec-content"><i>{{parseInt(Math.random() * 70000 + 20000)}}</i><img class="sm-icon" src="../../assets/game_icon.png" alt=""></div>
-          
+          <div class="dec-content"><i>{{parseInt(Math.random() * 70000 + 20000)}}</i><img class="sm-icon" src="../../assets/game_icon.png" alt=""></div> 
         </div>
       </a>
     </div>
@@ -15,8 +14,29 @@
 </template>
 
 <script>
+var akidList = [
+  'submarine dash',
+  'spy chase',
+  'gtc heat city',
+  'free the ball',
+  'epic run',
+  'doodle jump online',
+  'crazy birds',
+  'bombs and zombies',
+  'cookie crush 2',
+  'block racer',
+  'basketball hoops'
+]
 export default {
   name: 'Grid',
+  filters: {
+    double (e, id, name) {
+      // let hostname = location.hostname
+      // let patt = new RegExp(hostname + '?')
+      // let arr = akidList
+      // return arr.indexOf(name.toLowerCase()) !== -1 ? '/module/home.html?gid=' + id + '&games=' + name : e
+    }
+  },
   computed: {
   },
   props: {
@@ -29,27 +49,67 @@ export default {
   },
   data () {
     return {
-      title: 'You May Also Like',
-      list: [
+      akidList: [
         {
-          url: '/module/home.html',
-          avatar: 'https://hbimg.b0.upaiyun.com/df12ca977f12db068717b6e871502ad9f7190908c373-cwsUY7_fw658',
-          name: 'Family Guy',
-          count: 31821
+          id: 15796262,
+          url: ''
         },
         {
-          url: '/module/home.html',
-          avatar: 'https://hbimg.b0.upaiyun.com/df12ca977f12db068717b6e871502ad9f7190908c373-cwsUY7_fw658',
-          name: 'Family Guy Fames',
-          count: 31821
+          id: 15857184,
+          url: ''
         },
         {
-          url: '/module/home.html',
-          avatar: 'https://hbimg.b0.upaiyun.com/df12ca977f12db068717b6e871502ad9f7190908c373-cwsUY7_fw658',
-          name: 'Family Guy',
-          count: 31821
+          id: 16279977,
+          url: ''
+        },
+        {
+          id: 15796262,
+          url: ''
+        },
+        {
+          id: 15857184,
+          url: ''
+        },
+        {
+          id: 16279977,
+          url: ''
+        },
+        {
+          id: 16070450,
+          url: ''
+        },
+        {
+          id: 15926239,
+          url: ''
         }
       ]
+    }
+  },
+  methods: {
+    // 存放信息
+    resetCookie (e, data) {
+      let arr = akidList
+      let name = data.name.toLowerCase()
+      let numArr = this.getCookie('customer') ? JSON.parse(this.getCookie('customer')) : []
+      console.log(name)
+      let url = arr.indexOf(name) !== -1 ? '/module/home.html?gid=' + data.adsid + '&games=' + name : data.clickUrl
+      if (numArr.length < 3) {
+        let dataArr = numArr
+        let arrOne = dataArr.concat(data)
+        let arrTwo = arrOne.reverse()
+        this.setCookie('customer', JSON.stringify(arrTwo))
+        console.log(JSON.parse(this.getCookie('customer')))
+      } else {
+        let dataArr = numArr
+        let arrOne = dataArr.concat(data)
+        let arrTwo = arrOne.reverse()
+        let arrThree = arrTwo.pop()
+        console.log(arrThree)
+        this.setCookie('customer', JSON.stringify(arrTwo))
+        console.log(JSON.parse(this.getCookie('customer')))
+      }
+      // return false
+      window.location.href = url
     }
   }
 }
@@ -81,6 +141,7 @@ export default {
         align-items: center;
         .grid-icon {
           background: #999;
+          border-radius: .2rem;
           width: 2.6rem;
           height: 2.6rem;
         }

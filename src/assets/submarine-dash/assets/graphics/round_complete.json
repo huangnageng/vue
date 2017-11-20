@@ -1,0 +1,67 @@
+﻿{"frames": {
+
+"Button_Sign0000":
+{
+	"frame": {"x":1,"y":395,"w":38,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":39},
+	"sourceSize": {"w":38,"h":39}
+},
+"Facebook_Button0000":
+{
+	"frame": {"x":401,"y":206,"w":80,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
+	"sourceSize": {"w":80,"h":80}
+},
+"NewBest0000":
+{
+	"frame": {"x":401,"y":287,"w":82,"h":73},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":82,"h":73},
+	"sourceSize": {"w":82,"h":73}
+},
+"NextLevel_Button0000":
+{
+	"frame": {"x":401,"y":1,"w":94,"h":102},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":94,"h":102},
+	"sourceSize": {"w":94,"h":102}
+},
+"Statistic_Board0000":
+{
+	"frame": {"x":1,"y":1,"w":399,"h":393},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":399,"h":393},
+	"sourceSize": {"w":399,"h":393}
+},
+"Twitter_Button0000":
+{
+	"frame": {"x":401,"y":361,"w":72,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":80},
+	"sourceSize": {"w":72,"h":80}
+},
+"Upgrades_Button0000":
+{
+	"frame": {"x":401,"y":104,"w":93,"h":101},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":93,"h":101},
+	"sourceSize": {"w":93,"h":101}
+}},
+"meta": {
+	"app": "Adobe Flash Professional",
+	"version": "13.0.1.808",
+	"image": "round_complete.png",
+	"format": "RGBA8888",
+	"size": {"w":512,"h":512},
+	"scale": "1"
+}
+}

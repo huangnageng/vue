@@ -1,0 +1,259 @@
+﻿{"frames": {
+
+"Boat_Body_00000":
+{
+	"frame": {"x":689,"y":1241,"w":98,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":98,"h":80},
+	"sourceSize": {"w":98,"h":80}
+},
+"Boat_Body_0_Crashed0000":
+{
+	"frame": {"x":887,"y":1238,"w":98,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":98,"h":80},
+	"sourceSize": {"w":98,"h":80}
+},
+"Boat_Body_10000":
+{
+	"frame": {"x":2,"y":1164,"w":98,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":98,"h":80},
+	"sourceSize": {"w":98,"h":80}
+},
+"Boat_Body_1_Crashed0000":
+{
+	"frame": {"x":101,"y":1164,"w":98,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":98,"h":80},
+	"sourceSize": {"w":98,"h":80}
+},
+"Boat_Body_20000":
+{
+	"frame": {"x":689,"y":1159,"w":98,"h":81},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":98,"h":81},
+	"sourceSize": {"w":98,"h":81}
+},
+"Boat_Body_2_Crashed0000":
+{
+	"frame": {"x":590,"y":1159,"w":98,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":98,"h":82},
+	"sourceSize": {"w":98,"h":82}
+},
+"Boat_Body_30000":
+{
+	"frame": {"x":445,"y":1166,"w":98,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":98,"h":80},
+	"sourceSize": {"w":98,"h":80}
+},
+"Boat_Body_3_Crashed0000":
+{
+	"frame": {"x":788,"y":1238,"w":98,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":98,"h":80},
+	"sourceSize": {"w":98,"h":80}
+},
+"Bonus_Double0000":
+{
+	"frame": {"x":231,"y":1136,"w":106,"h":106},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":106,"h":106},
+	"sourceSize": {"w":106,"h":106}
+},
+"Bonus_Heart0000":
+{
+	"frame": {"x":825,"y":1131,"w":106,"h":106},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":106,"h":106},
+	"sourceSize": {"w":106,"h":106}
+},
+"Bonus_Magnet0000":
+{
+	"frame": {"x":338,"y":1136,"w":106,"h":106},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":106,"h":106},
+	"sourceSize": {"w":106,"h":106}
+},
+"Bonus_Shield0000":
+{
+	"frame": {"x":483,"y":1059,"w":106,"h":106},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":106,"h":106},
+	"sourceSize": {"w":106,"h":106}
+},
+"Bonus_Zip0000":
+{
+	"frame": {"x":825,"y":1024,"w":106,"h":106},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":106,"h":106},
+	"sourceSize": {"w":106,"h":106}
+},
+"Coin_Icon0000":
+{
+	"frame": {"x":590,"y":1059,"w":49,"h":49},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":49},
+	"sourceSize": {"w":49,"h":49}
+},
+"Coins_Magnet0000":
+{
+	"frame": {"x":231,"y":888,"w":251,"h":247},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":251,"h":247},
+	"sourceSize": {"w":251,"h":247}
+},
+"Heart_Icon0000":
+{
+	"frame": {"x":932,"y":1069,"w":49,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":44},
+	"sourceSize": {"w":49,"h":44}
+},
+"Hills_Bottom_Layer0000":
+{
+	"frame": {"x":2,"y":700,"w":971,"h":187},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":971,"h":187},
+	"sourceSize": {"w":971,"h":187}
+},
+"Hills_Top_Layer0000":
+{
+	"frame": {"x":2,"y":503,"w":971,"h":196},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":971,"h":196},
+	"sourceSize": {"w":971,"h":196}
+},
+"Light_Layer0000":
+{
+	"frame": {"x":2,"y":2,"w":1009,"h":262},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1009,"h":262},
+	"sourceSize": {"w":1009,"h":262}
+},
+"Rock_10000":
+{
+	"frame": {"x":483,"y":888,"w":203,"h":170},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":203,"h":170},
+	"sourceSize": {"w":203,"h":170}
+},
+"Rock_20000":
+{
+	"frame": {"x":687,"y":888,"w":165,"h":131},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":165,"h":131},
+	"sourceSize": {"w":165,"h":131}
+},
+"Rock_40000":
+{
+	"frame": {"x":687,"y":1020,"w":137,"h":138},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":137,"h":138},
+	"sourceSize": {"w":137,"h":138}
+},
+"Rock_50000":
+{
+	"frame": {"x":2,"y":888,"w":228,"h":275},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":228,"h":275},
+	"sourceSize": {"w":228,"h":275}
+},
+"Rocket0000":
+{
+	"frame": {"x":932,"y":1024,"w":84,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":84,"h":44},
+	"sourceSize": {"w":84,"h":44}
+},
+"Rocket_Sign0000":
+{
+	"frame": {"x":974,"y":553,"w":42,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":44},
+	"sourceSize": {"w":42,"h":44}
+},
+"Sand_Layer0000":
+{
+	"frame": {"x":2,"y":265,"w":981,"h":237},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":981,"h":237},
+	"sourceSize": {"w":981,"h":237}
+},
+"Shield0000":
+{
+	"frame": {"x":853,"y":888,"w":153,"h":135},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":153,"h":135},
+	"sourceSize": {"w":153,"h":135}
+},
+"Small_Bubble0000":
+{
+	"frame": {"x":984,"y":265,"w":13,"h":13},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":13,"h":13},
+	"sourceSize": {"w":13,"h":13}
+},
+"Turbo_Bar0000":
+{
+	"frame": {"x":200,"y":1243,"w":145,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":145,"h":28},
+	"sourceSize": {"w":145,"h":28}
+},
+"Turbo_Particle0000":
+{
+	"frame": {"x":544,"y":1242,"w":101,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":101,"h":7},
+	"sourceSize": {"w":101,"h":7}
+},
+"Zip_Icon0000":
+{
+	"frame": {"x":974,"y":503,"w":44,"h":49},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":49},
+	"sourceSize": {"w":44,"h":49}
+}},
+"meta": {
+	"app": "Adobe Flash Professional",
+	"version": "13.0.1.808",
+	"image": "level_graphics.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":2048},
+	"scale": "1"
+}
+}

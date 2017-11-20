@@ -1,7 +1,10 @@
 import axios from './http'
 import store from '../store'
 // API请求域名
-const URI = '' // 测试环境http://test.book.batmobi.net  ..www.novelcamp.net
+let webhost = location.hostname
+const URI = webhost === 'localhost' ? 'http://test.game.batmobi.net' : ''
+
+// const URI = ''  测试环境http://test.book.batmobi.net  ..www.novelcamp.net
 // 请求参数配置
 const requireData = (postData) => {
   if (postData !== undefined) {

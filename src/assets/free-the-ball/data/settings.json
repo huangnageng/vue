@@ -1,0 +1,37 @@
+﻿{
+	"lang": "en",
+	"last_lvl_moves": 20,
+
+	"shop": [
+		{
+			"type": 1,
+			"cnt": 1,
+			"price": 1000
+		},
+		{
+			"type": 1,
+			"cnt": 3,
+			"price": 2000
+		},
+		{
+			"type": 1,
+			"cnt": 10,
+			"price": 5000
+		},
+		{
+			"type": 2,
+			"cnt": 1,
+			"price": 50000
+		}
+	],
+
+	"awards": {
+		"maxTurnsPerc": 100,
+		"maxAwardPerc": 100,
+		"midTurnsPerc": 80,
+		"midAwardPerc": 80,
+		"minAwardPerc": 50
+	},
+
+	"adReward": 100
+}

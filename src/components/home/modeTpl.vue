@@ -3,40 +3,40 @@
   <div id="Tpl">
     <div class="tpl-box">
       <div class="tpl-des-content">
-        <img class="tpl-icon" src="../../assets/icons.png" alt="">
+        <img class="tpl-icon" :src="modeData.icon" alt="">
         <div class="tpl-content">
-          <div class="tip-title">Cookie Gukid</div>
+          <div class="tip-title">{{modeData.name}}</div>
              <div class="tip-start-box" >
              <img v-for="item in startCount" class="tip-star" 
-              :src=" require((/\.{1}/.test(start)) && (item == Math.ceil(start)) ?'../../assets/start3.png': (item <= start) ? '../../assets/start1.png' : '../../assets/start2.png') " 
+              :src=" require((/\.{1}/.test(modeData.rate/10)) && (item == Math.ceil(modeData.rate/10)) ?'../../assets/start3.png': (item <= modeData.rate/10) ? '../../assets/start1.png' : '../../assets/start2.png') " 
               alt="">
              </div>
         </div>
       </div>
-      <a href="" class="play-btn">Play Now</a>
+      <a :href="modeData.clickUrl|opUrl" class="play-btn">Play Now</a>
       <!-- 广告位置 -->
       <div class="ads-box">
         <ins class="adsbygoogle"
         style="display:inline-block;width:320px;height:100px"
         data-ad-client="ca-pub-3545063517335060"
-        data-ad-slot="9018369112"></ins>
+        data-ad-slot="1094055713"></ins>
       </div>
       <div class="tpl-tipText">a Hihgtly addictive match 3 mastprepic</div>
       <div class="tpl-dimg-content">
-        <img src="../../assets/img1.png" alt="">
-        <img src="../../assets/img2.png" alt="">
+        <img :src="modeData.banner_1" alt="">
+        <img :src="modeData.banner_2" alt="">
       </div>
        <!-- 广告位置 -->
       <div class="ads-box">
         <ins class="adsbygoogle"
         style="display:inline-block;width:320px;height:100px"
         data-ad-client="ca-pub-3545063517335060"
-        data-ad-slot="9018369112"></ins>
+        data-ad-slot="5057351458"></ins>
       </div>
        <div class="play-content">
           <div class="play-title">{{decTitle}}</div>
           <div class="play-dec">
-            wrote about her “purity pledge” that went wrong. It led to an incredibly short starter marriage. Once she realized that she and her new husband had absolutely zero sexual chemistry, she counted down the days until she could get a divorce, which happened six months into their marriage. Here are five reasons to get rid of that purity pledge and do the dirty before you say 
+            {{modeData.description}}
           </div>
        </div>
     </div>
@@ -44,7 +44,18 @@
 </template>
 
 <script>
+// var akidList = [15796262, 15857184, 16279977, 15796262, 15857184, 16279977, 16070450, 15926239]
 export default {
+  filters: {
+    opUrl (e) {
+      return /desc\.html/.test(e) ? e.replace('desc.html', 'game.html') : e
+    }
+  },
+  props: {
+    modeData: {
+      default: {}
+    }
+  },
   name: 'Tpl',
   computed: {
   },

@@ -11,13 +11,13 @@
     <div class="main-box">
     <view-box ref="viewBox" body-padding-top="1.5rem" body-padding-bottom="0">
       <div class="content-box">
-        <mode-tpl></mode-tpl>
+        <mode-tpl :modeData ="gameDetail"></mode-tpl>
       <!-- 广告位置 -->
       <div class="ads-box">
         <ins class="adsbygoogle"
-        style="display:inline-block;width:320px;height:100px"
-        data-ad-client="ca-pub-3545063517335060"
-        data-ad-slot="9018369112"></ins>
+     style="display:inline-block;width:320px;height:100px"
+     data-ad-client="ca-pub-3545063517335060"
+     data-ad-slot="2549063028"></ins>
       </div>
         <cmm-grid :modeTitle="title" :modeList="list"></cmm-grid>
       </div>
@@ -41,10 +41,13 @@ export default {
   mounted () {
     //  获取链接数据
     console.log(this.paramObj)
-    let queNum = document.querySelectorAll('.adsbygoogle').length
-    for (var i = 0; i < queNum; i++) {
-      (window.adsbygoogle = window.adsbygoogle || []).push({})
-    }
+    this.$nextTick(function () {
+      let queNum = document.querySelectorAll('.adsbygoogle').length
+      for (var i = 0; i < queNum; i++) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({})
+      }
+    })
+    this.modeRequire()
   },
   computed: {
     ...mapGetters([
@@ -55,52 +58,17 @@ export default {
     return {
       params: {},
       title: 'More Games',
-      list: [
-        {
-          url: '/module/home.html',
-          avatar: '../../assets/n1.png',
-          name: 'Family Guy',
-          count: 31821
-        },
-        {
-          url: '/module/home.html',
-          avatar: '../../assets/n1.png',
-          name: 'Family Guy Fames',
-          count: 31821
-        },
-        {
-          url: '/module/home.html',
-          avatar: '../../assets/n1.png',
-          name: 'Family Guy',
-          count: 31821
-        },
-        {
-          url: '/module/home.html',
-          avatar: '../../assets/n1.png',
-          name: 'Family Guy',
-          count: 31821
-        },
-        {
-          url: '/module/home.html',
-          avatar: '../../assets/n1.png',
-          name: 'Family Guy Fames',
-          count: 31821
-        },
-        {
-          url: '/module/home.html',
-          avatar: '../../assets/n1.png',
-          name: 'Family Guy',
-          count: 31821
-        }
-      ]
+      gameDetail: {},
+      list: []
     }
   },
   methods: {
-    ...mapActions(['GetBookInfo']),
+    ...mapActions(['GetGameDir']),
     modeRequire () {
-      let id = 101
-      return this.GetBookInfo({ bookId: +id }).then(res => {
+      let id = +this.paramObj.gid
+      return this.GetGameDir({ gid: +id }).then(res => {
         if (res.status === 200) {
+          this.gameDetail = res.data
           return res
         }
         return res

@@ -14,7 +14,7 @@
         data-ad-client="ca-pub-3545063517335060"
         data-ad-slot="9778782402"></ins>
       </div>
-        <cmm-grid :modeTitle="titleSec" :modeList="list"></cmm-grid>
+        <cmm-grid :modeTitle="titleSec" :modeList="topList"></cmm-grid>
         <!-- 广告位置 -->
       <div class="ads-box">
         <ins class="adsbygoogle"
@@ -49,26 +49,8 @@ export default {
     return {
       title: 'You May Also Like',
       titleSec: 'Top Games',
-      list: [
-        {
-          url: '/module/home.html?id=1',
-          avatar: '../../assets/icons.png',
-          name: 'Family Guy',
-          count: 31821
-        },
-        {
-          url: '/module/home.html?id=2',
-          avatar: '../../assets/icons.png',
-          name: 'Family Guy',
-          count: 31821
-        },
-        {
-          url: '/module/home.html?id=3',
-          avatar: '../../assets/icons.png',
-          name: 'Family Guy',
-          count: 31821
-        }
-      ]
+      list: [],
+      topList: []
     }
   },
   mounted () {
@@ -80,11 +62,17 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['GetBookInfo']),
+    ...mapActions(['GetMain']),
     modeRequire () {
-      let id = 101
-      return this.GetBookInfo({ bookId: +id }).then(res => {
+      return this.GetMain().then(res => {
         if (res.status === 200) {
+          console.log(res)
+          if (this.cookieData.length > 0) {
+            this.list = this.cookieData
+          } else {
+            this.list = res.data.likes
+          }
+          this.topList = res.data.tops
           return res
         }
         return res

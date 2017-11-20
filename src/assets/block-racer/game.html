@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="translucent-black">
+<meta name="apple-mobile-web-app-title" content="Block Racer">
+<meta http-equiv="cleartype" content="on">
+<link rel="icon" type="image/GIF" href="icon.ico">
+<title>Block Racer</title>
+<style type="text/css">
+    {
+      padding: 0;
+      margin: 0;
+      border: 0;
+
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+    html, body {
+      overflow: hidden;
+      outline: none;
+	  background-color: #06a0a0;
+
+      /* No touch action */
+      -ms-touch-action: none;
+      touch-action: none;
+      width: 100%;
+      height: 100%;
+    }
+    #game {
+      /* No touch action */
+      touch-action-delay: none;
+      touch-action: none;
+      -ms-touch-action: none;
+
+      /* No user select */
+      -webkit-touch-callout: none;
+        -webkit-user-select: none;
+         -khtml-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+      /* Pixelated, remove these lines for smooth scaling */
+      /*image-rendering: optimizeSpeed;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -o-crisp-edges;
+      image-rendering: pixelated;
+      -ms-interpolation-mode: nearest-neighbor;*/
+    }
+
+    /* Center an element using flexbox */
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+    }
+    #logo {
+      width: 60%;
+      height: auto;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -80%);
+      -ms-transform: translate(-50%, -80%);
+      transform: translate(-50%, -80%);
+    }
+  </style>
+<script>
+    window.EASY_MODE_PRICE  = 500;
+    window.CONTINUE_PRICE   = 100;
+  </script><link rel="icon" type="image/GIF" href="icon.ico">
+<style>#sg-loadscrn{
+    position:fixed; top:0;left:0;width:100%; height:100%; background-color:#fff; z-index:9999;
+}
+
+#sg-spinner{
+	position: absolute; width: 150px; height: 50px; top:50%; left:50%; margin-top:-25px; margin-left:-75px;
+	background-image: url('//d3ktldhyer9fya.cloudfront.net/assets/sg-loader.gif');
+}
+
+#sg-spinner.no-img{
+    background: #ffffff;
+}
+
+#sg-loadtext{
+    position:absolute;
+    font-family: sans-serif;
+    top:50%; left:50%;
+    width: 250px;
+    margin-left:-125px;
+    margin-top:-125px;
+    text-align:center;
+    line-height:150%;
+    font-size:16px;
+}</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-104413806-11', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    <script type="text/javascript" src="./assets/sg.hooks.js"></script>
+
+    <script type="text/javascript" src="./softgames_game.js"></script>
+
+<script type="text/javascript">
+        window.gameLangs = ['en', 'de', 'es', 'fr', 'it', 'pt', 'ru', 'tr'];
+        window.gameJS = ['softgames_game.js'];
+        window.gameOnLoadScript = "onloadFunction()";
+</script>
+</head>
+<body>
+  <div id="container">
+    <canvas id="game"></canvas>
+</div>
+  <img src="media/logo_ingame.png" id="logo" style="display: none;">
+
+  <div style="width: 100%;text-align: center;left: 0px;bottom: 0px;height: 105px;position: absolute;" id="bannerInBottom">
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- BlockRacer_start_banner_320*50 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-3545063517335060"
+     data-ad-slot="5307708480"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  </div>
+</body>
+<script type="text/javascript" src="./assets/softgames-1.1.js"></script>
+</html>
