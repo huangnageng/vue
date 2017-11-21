@@ -34,8 +34,9 @@
       return obj
     }
     let data = getQueryObject().games ? getQueryObject().games.toLowerCase() : ''
+    let name = data.tolowercase()
     var setData = []
-    switch (data) {
+    switch (name) {
       case 'submarine dash':
         console.log('Submarine Dash')
         window.ga('create', 'UA-104413806-7', 'auto')
