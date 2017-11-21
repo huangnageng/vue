@@ -69,6 +69,10 @@ export default {
           console.log(res)
           if (this.cookieData.length > 0) {
             this.list = this.cookieData
+            if (this.cookieData.length < 3) {
+              this.list = this.cookieData.concat(res.data.likes).slice(0, 3)
+              console.log(this.list)
+            }
           } else {
             this.list = res.data.likes
           }

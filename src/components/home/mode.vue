@@ -17,9 +17,16 @@
         <ins class="adsbygoogle"
      style="display:inline-block;width:320px;height:100px"
      data-ad-client="ca-pub-3545063517335060"
-     data-ad-slot="2549063028"></ins>
+     :data-ad-slot="setData['ads']?setData['ads'][2]:''"></ins>
       </div>
-        <cmm-grid :modeTitle="title" :modeList="list"></cmm-grid>
+        <cmm-grid :modeTitle="title" :modeList="gameDetail['mores']"></cmm-grid>
+          <!-- 广告位置 -->
+        <div class="ads-box">
+          <ins class="adsbygoogle"
+      style="display:inline-block;width:320px;height:100px"
+      data-ad-client="ca-pub-3545063517335060"
+      :data-ad-slot="setData['ads']?setData['ads'][3]:''"></ins>
+        </div>
       </div>
     </view-box>
     </div>
@@ -37,6 +44,8 @@ export default {
     XHeader, ViewBox, CmmGrid, modeTpl
   },
   created () {
+    console.log(window.setData)
+    this.setData = window.setData
   },
   mounted () {
     //  获取链接数据
@@ -59,7 +68,8 @@ export default {
       params: {},
       title: 'More Games',
       gameDetail: {},
-      list: []
+      list: [],
+      setData: {}
     }
   },
   methods: {
@@ -69,6 +79,7 @@ export default {
       return this.GetGameDir({ gid: +id }).then(res => {
         if (res.status === 200) {
           this.gameDetail = res.data
+          this.uploadPageLoadTime()
           return res
         }
         return res

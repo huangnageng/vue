@@ -13,15 +13,15 @@
              </div>
         </div>
       </div>
-      <a :href="modeData.clickUrl|opUrl" class="play-btn">Play Now</a>
+      <a  @click ="linkClick(modeData.clickUrl)" :data-href="modeData.clickUrl|opUrl" class="play-btn">Play Now</a>
       <!-- 广告位置 -->
       <div class="ads-box">
         <ins class="adsbygoogle"
         style="display:inline-block;width:320px;height:100px"
         data-ad-client="ca-pub-3545063517335060"
-        data-ad-slot="1094055713"></ins>
+        :data-ad-slot="setData['ads']?setData['ads'][0]:''"></ins>
       </div>
-      <div class="tpl-tipText">a Hihgtly addictive match 3 mastprepic</div>
+      <div class="tpl-tipText">{{modeData.description}}</div>
       <div class="tpl-dimg-content">
         <img :src="modeData.banner_1" alt="">
         <img :src="modeData.banner_2" alt="">
@@ -31,12 +31,12 @@
         <ins class="adsbygoogle"
         style="display:inline-block;width:320px;height:100px"
         data-ad-client="ca-pub-3545063517335060"
-        data-ad-slot="5057351458"></ins>
+        :data-ad-slot="setData['ads']?setData['ads'][1]:''"></ins>
       </div>
        <div class="play-content">
           <div class="play-title">{{decTitle}}</div>
           <div class="play-dec">
-            {{modeData.description}}
+            {{setData.dec}}
           </div>
        </div>
     </div>
@@ -44,7 +44,6 @@
 </template>
 
 <script>
-// var akidList = [15796262, 15857184, 16279977, 15796262, 15857184, 16279977, 16070450, 15926239]
 export default {
   filters: {
     opUrl (e) {
@@ -64,12 +63,19 @@ export default {
       title: 'More Games',
       startCount: 5,
       start: 3.5,
-      decTitle: 'How to play'
+      decTitle: 'How to play',
+      setData: {}
     }
   },
   created () {
+    this.setData = window.setData
   },
   methods: {
+    linkClick (e) {
+      this.go2Game()
+      let url = /desc\.html/.test(e) ? e.replace('desc.html', 'game.html') : e
+      window.location.href = url
+    }
   }
 }
 </script>

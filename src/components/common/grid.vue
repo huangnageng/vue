@@ -18,12 +18,14 @@ var akidList = [
   'submarine dash',
   'spy chase',
   'gtc heat city',
+  'heat city',
   'free the ball',
   'epic run',
   'doodle jump online',
   'crazy birds',
   'bombs and zombies',
   'cookie crush 2',
+  'cookie crush 4',
   'block racer',
   'basketball hoops'
 ]
@@ -44,7 +46,6 @@ export default {
       default: ''
     },
     modeList: {
-      default: []
     }
   },
   data () {
@@ -91,24 +92,38 @@ export default {
       let arr = akidList
       let name = data.name.toLowerCase()
       let numArr = this.getCookie('customer') ? JSON.parse(this.getCookie('customer')) : []
-      console.log(name)
       let url = arr.indexOf(name) !== -1 ? '/module/home.html?gid=' + data.adsid + '&games=' + name : data.clickUrl
+      console.log(numArr)
       if (numArr.length < 3) {
-        let dataArr = numArr
-        let arrOne = dataArr.concat(data)
-        let arrTwo = arrOne.reverse()
-        this.setCookie('customer', JSON.stringify(arrTwo))
-        console.log(JSON.parse(this.getCookie('customer')))
+        let dataArr = numArr.reverse()
+        if (dataArr.length === 0) {
+          let arrOne = dataArr.concat(data)
+          let arrTwo = arrOne.reverse()
+          this.setCookie('customer', JSON.stringify(arrTwo))
+          console.log(JSON.parse(this.getCookie('customer')))
+        }
+        for (let i = 0; i < dataArr.length; i++) {
+          console.log(dataArr[i].adsid)
+          if (dataArr[i].adsid !== data.adsid) {
+            console.log(dataArr[i])
+            let arrOne = dataArr.concat(data)
+            let arrTwo = arrOne.reverse()
+            this.setCookie('customer', JSON.stringify(arrTwo))
+            console.log(JSON.parse(this.getCookie('customer')))
+          }
+        }
       } else {
-        let dataArr = numArr
-        let arrOne = dataArr.concat(data)
-        let arrTwo = arrOne.reverse()
-        let arrThree = arrTwo.pop()
-        console.log(arrThree)
-        this.setCookie('customer', JSON.stringify(arrTwo))
+        let dataArr = numArr.reverse()
+        for (let i = 0; i < dataArr.length; i++) {
+          let arrOne = dataArr.concat(data)
+          let arrTwo = arrOne.reverse()
+          arrTwo.pop()
+          this.setCookie('customer', JSON.stringify(arrTwo))
+        }
         console.log(JSON.parse(this.getCookie('customer')))
       }
       // return false
+      console.log(url)
       window.location.href = url
     }
   }

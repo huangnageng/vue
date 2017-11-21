@@ -120,6 +120,25 @@ export default {
         obj[name] = val
       })
       return obj
+    },
+    // 加载
+    uploadPageLoadTime () {
+      var pageLoadTime = new Date().getTime()
+      var time = parseInt(((new Date().getTime()) - pageLoadTime) / 1000.0)
+      console.log('介绍页加载完成了:' + time + 's')
+      window.ga('send', 'event', {
+        eventCategory: '介绍页',
+        eventAction: '加载完成',
+        eventLabel: time
+      })
+    },
+    // 开始游戏
+    go2Game () {
+      window.ga('send', 'event', {
+        eventCategory: '介绍页',
+        eventAction: '进入游戏',
+        eventLabel: (0)
+      })
     }
   }
 }
