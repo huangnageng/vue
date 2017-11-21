@@ -68,10 +68,12 @@ export default {
         if (res.status === 200) {
           console.log(res)
           if (this.cookieData.length > 0) {
-            this.list = this.cookieData
             if (this.cookieData.length < 3) {
-              this.list = this.cookieData.concat(res.data.likes).slice(0, 3)
-              console.log(this.list)
+              // this.list = this.cookieData.concat(res.data.likes).slice(0, 3)
+              let ard = this.unique(this.cookieData.concat(res.data.likes))
+              this.list = ard.slice(0, 3)
+            } else {
+              this.list = this.cookieData
             }
           } else {
             this.list = res.data.likes
@@ -81,6 +83,21 @@ export default {
         }
         return res
       })
+    },
+    unique (askArr) {
+      var res = []
+      for (var i = 0, len = askArr.length; i < len; i++) {
+        for (var j = i + 1; j < len; j++) {
+          // 如果发现相同元素
+          // 则 i 自增进入下一个循环比较
+          console.log(askArr[i].adsid)
+          if (askArr[i].adsid === askArr[j].adsid) {
+            j = ++i
+          }
+        }
+        res.push(askArr[i])
+      }
+      return res
     }
   }
 }

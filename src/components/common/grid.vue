@@ -87,43 +87,57 @@ export default {
     }
   },
   methods: {
+    unique (askArr) {
+      var res = []
+      for (var i = 0, len = askArr.length; i < len; i++) {
+        for (var j = i + 1; j < len; j++) {
+          // 如果发现相同元素
+          // 则 i 自增进入下一个循环比较
+          console.log(askArr[i].adsid)
+          if (askArr[i].adsid === askArr[j].adsid) {
+            j = ++i
+          }
+        }
+        res.push(askArr[i])
+      }
+      return res
+    },
     // 存放信息
     resetCookie (e, data) {
       let arr = akidList
       let name = data.name.toLowerCase()
       let numArr = this.getCookie('customer') ? JSON.parse(this.getCookie('customer')) : []
       let url = arr.indexOf(name) !== -1 ? '/module/home.html?gid=' + data.adsid + '&games=' + name : data.clickUrl
-      console.log(numArr)
+      // 记录小于3个
       if (numArr.length < 3) {
         let dataArr = numArr.reverse()
+        // 没有记录添加记录
         if (dataArr.length === 0) {
           let arrOne = dataArr.concat(data)
           let arrTwo = arrOne.reverse()
-          this.setCookie('customer', JSON.stringify(arrTwo))
-          console.log(JSON.parse(this.getCookie('customer')))
+          let arrp = this.unique(arrTwo)
+          this.setCookie('customer', JSON.stringify(arrp))
         }
+        // 判断是否重复
         for (let i = 0; i < dataArr.length; i++) {
-          console.log(dataArr[i].adsid)
           if (dataArr[i].adsid !== data.adsid) {
-            console.log(dataArr[i])
             let arrOne = dataArr.concat(data)
             let arrTwo = arrOne.reverse()
-            this.setCookie('customer', JSON.stringify(arrTwo))
-            console.log(JSON.parse(this.getCookie('customer')))
+            let arrp = this.unique(arrTwo)
+            this.setCookie('customer', JSON.stringify(arrp))
           }
         }
       } else {
         let dataArr = numArr.reverse()
         for (let i = 0; i < dataArr.length; i++) {
+          console.log(dataArr[i].adsid)
           let arrOne = dataArr.concat(data)
           let arrTwo = arrOne.reverse()
-          arrTwo.pop()
-          this.setCookie('customer', JSON.stringify(arrTwo))
+          let arrp = this.unique(arrTwo.pop())
+          this.setCookie('customer', JSON.stringify(arrp))
         }
-        console.log(JSON.parse(this.getCookie('customer')))
       }
       // return false
-      console.log(url)
       window.location.href = url
     }
   }

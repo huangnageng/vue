@@ -5,13 +5,13 @@
     <x-header class="header-title">
       <div slot="overwrite-left" class="header-content" @click="back">
         <i class="iconfont back-icon">&#xe621;</i>
-        <span class="mode-title">Game Title</span>
+        <span class="mode-title">Home</span>
       </div>
     </x-header>
     <div class="main-box">
     <view-box ref="viewBox" body-padding-top="1.5rem" body-padding-bottom="0">
       <div class="content-box">
-        <mode-tpl :modeData ="gameDetail"></mode-tpl>
+        <mode-tpl :modeData ="setData"></mode-tpl>
       <!-- 广告位置 -->
       <div class="ads-box">
         <ins class="adsbygoogle"
@@ -86,7 +86,7 @@ export default {
       })
     },
     back () {
-      history.back()
+      window.location.href = '/module/index.html'
     }
   }
 }

@@ -23,8 +23,8 @@
       </div>
       <div class="tpl-tipText">{{modeData.description}}</div>
       <div class="tpl-dimg-content">
-        <img :src="modeData.banner_1" alt="">
-        <img :src="modeData.banner_2" alt="">
+        <img :src="modeData.banner_1" alt="" key='banner1'>
+        <img :src="modeData.banner_2" alt="" key='banner2'>
       </div>
        <!-- 广告位置 -->
       <div class="ads-box">
@@ -97,6 +97,7 @@ export default {
       background: #666;
       flex: 0 0 auto;
       width: 2rem;
+      border-radius: .2rem;
       height: 2rem;
       margin-right: .2rem;
     }
