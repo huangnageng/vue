@@ -23,8 +23,8 @@
       </div>
       <div class="tpl-tipText">{{modeData.description}}</div>
       <div class="tpl-dimg-content">
-        <img :src="modeData.banner_1" alt="" key='banner1'>
-        <img :src="modeData.banner_2" alt="" key='banner2'>
+        <img class="load-img" :src="modeData.banner_1" alt="" key='banner1'>
+        <img class="load-img" :src="modeData.banner_2" alt="" key='banner2'>
       </div>
        <!-- 广告位置 -->
       <div class="ads-box">
@@ -65,6 +65,21 @@ export default {
       start: 3.5,
       decTitle: 'How to play',
       setData: {}
+    }
+  },
+  mounted () {
+    let sw = document.body.clientWidth || document.documentElement.clientWidth
+
+    for (let i = 0; i < document.querySelectorAll('img.load-img').length; i++) {
+      console.log(sw)
+      document.querySelectorAll('img.load-img')[i].onload = function (e) {
+        let w = e.target.width || e.path[0].width
+        let h = e.target.height || e.path[0].height
+        document.querySelectorAll('img.load-img')[i].style.width = (h * 0.8 >= w) ? '46%' : '100%'
+        if (h * 0.8 > w) {
+          document.querySelector('img.load-img').style.margin = '0 4% 0 0'
+        }
+      }
     }
   },
   created () {
@@ -140,16 +155,17 @@ export default {
     text-align: center;
   }
   .tpl-dimg-content {
-    overflow-x: auto;
-    display: flex;
-    flex-wrap: nowrap;
+    // overflow-x: auto;
     & > img {
-      width: 48%;
-      height: 7.5rem;
+      width: 100%;
     }
-    & > img:nth-child(2n) {
-      margin-left: 4%;
-    }
+    // & > img {
+    //   width: 48%;
+    //   height: 7.5rem;
+    // }
+    // & > img:nth-child(2n) {
+    //   margin-left: 4%;
+    // }
   }
   .play-content {
     padding: 0;
