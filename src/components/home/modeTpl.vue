@@ -13,30 +13,39 @@
              </div>
         </div>
       </div>
-      <a  @click ="linkClick(modeData.clickUrl)" :data-href="modeData.clickUrl|opUrl" class="play-btn">Play Now</a>
       <!-- 广告位置 -->
       <div class="ads-box">
         <ins class="adsbygoogle"
         style="display:inline-block;width:320px;height:100px"
         data-ad-client="ca-pub-3545063517335060"
-        :data-ad-slot="setData['ads']?setData['ads'][0]:''"></ins>
+        :data-ad-slot="modeData['ads']?modeData['ads'][0]:''"></ins>
+      </div>
+      <a @click ="linkClick(modeData.clickUrl)" :data-href="modeData.clickUrl|opUrl" class="play-btn">Play Now</a>
+      
+      <!-- 广告位置 -->
+      <div class="ads-box">
+        <ins class="adsbygoogle"
+        style="display:inline-block;width:320px;height:100px"
+        data-ad-client="ca-pub-3545063517335060"
+        :data-ad-slot="modeData['ads']?modeData['ads'][1]:''"></ins>
       </div>
       <div class="tpl-tipText">{{modeData.description}}</div>
       <div class="tpl-dimg-content">
         <img class="load-img" :src="modeData.banner_1" alt="" key='banner1'>
         <img class="load-img" :src="modeData.banner_2" alt="" key='banner2'>
       </div>
-       <!-- 广告位置 -->
+       
+      <!-- 广告位置 -->
       <div class="ads-box">
         <ins class="adsbygoogle"
-        style="display:inline-block;width:320px;height:100px"
-        data-ad-client="ca-pub-3545063517335060"
-        :data-ad-slot="setData['ads']?setData['ads'][1]:''"></ins>
+     style="display:inline-block;width:320px;height:100px"
+     data-ad-client="ca-pub-3545063517335060"
+     :data-ad-slot="modeData['ads']?modeData['ads'][2]:''"></ins>
       </div>
        <div class="play-content">
           <div class="play-title">{{decTitle}}</div>
           <div class="play-dec">
-            {{setData.dec}}
+            {{modeData.dec}}
           </div>
        </div>
     </div>
@@ -63,15 +72,12 @@ export default {
       title: 'More Games',
       startCount: 5,
       start: 3.5,
-      decTitle: 'How to play',
-      setData: {}
+      decTitle: 'How to play'
     }
   },
   mounted () {
-    let sw = document.body.clientWidth || document.documentElement.clientWidth
-
+    // let sw = document.body.clientWidth || document.documentElement.clientWidth
     for (let i = 0; i < document.querySelectorAll('img.load-img').length; i++) {
-      console.log(sw)
       document.querySelectorAll('img.load-img')[i].onload = function (e) {
         let w = e.target.width || e.path[0].width
         let h = e.target.height || e.path[0].height
@@ -83,7 +89,6 @@ export default {
     }
   },
   created () {
-    this.setData = window.setData
   },
   methods: {
     linkClick (e) {
@@ -101,6 +106,7 @@ export default {
     box-shadow: 0 0 .6rem #ccc;
     background: #fff;
     padding:.4rem .3rem .2rem .3rem;
+    
   }
   .tpl-des-content {
     display: flex;

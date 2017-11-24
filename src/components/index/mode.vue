@@ -6,7 +6,7 @@
     <div class="main-box">
     <view-box ref="viewBox" body-padding-top="1.5rem" body-padding-bottom="0">
       <div class="content-box">
-        <cmm-grid :modeTitle="title" :modeList="list"></cmm-grid>
+        <cmm-grid :modeTitle="title" :modeList="list" :dataNum="false" :indexGa="true"></cmm-grid>
         <!-- 广告位置 -->
       <div class="ads-box">
         <ins class="adsbygoogle"
@@ -14,7 +14,7 @@
         data-ad-client="ca-pub-3545063517335060"
         data-ad-slot="9778782402"></ins>
       </div>
-        <cmm-grid :modeTitle="titleSec" :modeList="topList"></cmm-grid>
+        <cmm-grid :modeTitle="titleSec" :modeList="topList" :indexGa="true"></cmm-grid>
         <!-- 广告位置 -->
       <div class="ads-box">
         <ins class="adsbygoogle"
@@ -32,6 +32,8 @@
 import { XHeader, ViewBox } from 'vux'
 import { mapActions, mapGetters } from 'vuex'
 import CmmGrid from '../common/grid.vue'
+window.ga('create', 'UA-104413806-15', 'auto')
+window.ga('send', 'pageview')
 export default {
   name: 'app',
   components: {
@@ -64,6 +66,7 @@ export default {
   methods: {
     ...mapActions(['GetMain']),
     modeRequire () {
+      let pageLoadTime = new Date().getTime()
       return this.GetMain().then(res => {
         if (res.status === 200) {
           console.log(res)
@@ -79,6 +82,7 @@ export default {
             this.list = res.data.likes
           }
           this.topList = res.data.tops
+          this.uploadIndexLoadTime(pageLoadTime)
           return res
         }
         return res

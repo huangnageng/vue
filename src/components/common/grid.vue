@@ -6,7 +6,7 @@
         <img class="grid-icon" :src="item.icon" alt="">
         <div class="grid-dec">
           <div class="dec-title">{{item.name}}</div>
-          <div class="dec-content"><i>{{parseInt(Math.random() * 70000 + 20000)}}</i><img class="sm-icon" src="../../assets/game_icon.png" alt=""></div> 
+          <div class="dec-content" v-if="dataNum"><i>{{parseInt(Math.random() * 70000 + 20000)}}</i><img class="sm-icon" src="../../assets/game_icon.png" alt=""></div> 
         </div>
       </a>
     </div>
@@ -14,19 +14,36 @@
 </template>
 
 <script>
+// var akidList = [
+//   'submarine dash',
+//   'spy chase',
+//   'gtc heat city',
+//   'heat city',
+//   'free the ball',
+//   'epic run',
+//   'doodle jump online',
+//   'crazy birds',
+//   'bombs and zombies',
+//   'cookie crush 2',
+//   'cookie crush',
+//   'cookie crush 4',
+//   'block racer',
+//   'basketball hoops'
+// ]
 var akidList = [
-  'submarine dash',
+  '15973391',
   'spy chase',
-  'gtc heat city',
+  '15926239',
   'heat city',
-  'free the ball',
-  'epic run',
+  '16151312',
+  '15857184',
   'doodle jump online',
-  'crazy birds',
-  'bombs and zombies',
-  'cookie crush 2',
+  '16279977',
+  '16070450',
+  '15750452',
+  'cookie crush',
   'cookie crush 4',
-  'block racer',
+  '16992852',
   'basketball hoops'
 ]
 export default {
@@ -46,6 +63,12 @@ export default {
       default: ''
     },
     modeList: {
+    },
+    dataNum: {
+      default: true
+    },
+    indexGa: {
+      default: false
     }
   },
   data () {
@@ -105,9 +128,12 @@ export default {
     // 存放信息
     resetCookie (e, data) {
       let arr = akidList
-      let name = data.name.toLowerCase()
+      let id = String(data.adsid)
       let numArr = this.getCookie('customer') ? JSON.parse(this.getCookie('customer')) : []
-      let url = arr.indexOf(name) !== -1 ? '/module/home.html?gid=' + data.adsid + '&games=' + name : data.clickUrl
+      let url = (arr.indexOf(id) !== -1) ? 'home.html?gid=' + data.adsid : data.clickUrl
+      if (this.indexGa) {
+        this.clickGame(data.name)
+      }
       // 记录小于3个
       if (numArr.length < 3) {
         let dataArr = numArr.reverse()
@@ -137,6 +163,7 @@ export default {
           this.setCookie('customer', JSON.stringify(arrp))
         }
       }
+      // console.log(url)
       // return false
       window.location.href = url
     }

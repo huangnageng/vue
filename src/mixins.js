@@ -121,15 +121,33 @@ export default {
       })
       return obj
     },
-    // 加载
-    uploadPageLoadTime () {
-      var pageLoadTime = new Date().getTime()
-      var time = parseInt(((new Date().getTime()) - pageLoadTime) / 1000.0)
+    // 介绍页加载
+    uploadPageLoadTime (pageLoadTime) {
+      var time = parseFloat(((new Date().getTime()) - pageLoadTime) / 1000.0).toFixed(3)
       console.log('介绍页加载完成了:' + time + 's')
       window.ga('send', 'event', {
         eventCategory: '介绍页',
         eventAction: '加载完成',
         eventLabel: time
+      })
+    },
+    uploadIndexLoadTime (pageLoadTime) {
+      console.log(new Date().getTime())
+      var time = parseFloat(((new Date().getTime()) - pageLoadTime) / 1000.0).toFixed(3)
+      console.log('首页加载完成了:' + time + 's')
+      window.ga('send', 'event', {
+        eventCategory: '商城首页',
+        eventAction: '加载完成',
+        eventLabel: time
+      })
+    },
+    // 点击商城游戏
+    clickGame (name) {
+      console.log('点击商城游戏:' + name)
+      window.ga('send', 'event', {
+        eventCategory: '商城首页',
+        eventAction: '点击游戏',
+        eventLabel: name
       })
     },
     // 开始游戏

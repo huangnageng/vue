@@ -2,7 +2,7 @@ import axios from './http'
 import store from '../store'
 // API请求域名
 let webhost = location.hostname
-const URI = webhost === 'localhost' ? 'http://test.game.batmobi.net' : 'http://test.game.batmobi.net'
+const URI = webhost === 'localhost' ? 'http://test.game.batmobi.net' : 'http://game.city.dailyluck.net'
 
 // const URI = ''  测试环境http://test.book.batmobi.net  ..www.novelcamp.net
 // 请求参数配置
