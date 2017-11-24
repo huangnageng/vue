@@ -7,11 +7,13 @@ export default {
   },
   created () {
     // 用户7天内是否已经上过该网站
-    if (this.getCookie('customer')) {
+    if (this.getLocal('customer')) {
+      let that = this
       this.userCookie = true
-      this.cookieData = JSON.parse(this.getCookie('customer'))
+      this.cookieData = that.getLocal('customer') ? JSON.parse(that.getLocal('customer')) : []
     } else {
-      this.setCookie('customer', [], 7 * 24 * 3600)
+      // this.setCookie('customer', [], 7 * 24 * 3600)
+      this.setLocal('customer', [])
     }
     var htmlEl = document.documentElement
     var momentWith = 0
@@ -98,6 +100,14 @@ export default {
       cookie.set(name, value, {
         expires: expiresDate
       })
+    },
+    setLocal (name, value) {
+      let storage = window.localStorage
+      storage.setItem(name, value)
+    },
+    getLocal (name) {
+      let storage = window.localStorage
+      return storage.getItem(name)
     },
     // 获取cookie
     getCookie (name) {

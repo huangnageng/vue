@@ -129,39 +129,45 @@ export default {
     resetCookie (e, data) {
       let arr = akidList
       let id = String(data.adsid)
-      let numArr = this.getCookie('customer') ? JSON.parse(this.getCookie('customer')) : []
+      let numArr = this.cookieData ? this.cookieData : []
       let url = (arr.indexOf(id) !== -1) ? '/module/home.html?gid=' + data.adsid : data.clickUrl
       if (this.indexGa) {
         this.clickGame(data.name)
       }
       // 记录小于3个
       if (numArr.length < 3) {
-        let dataArr = numArr.reverse()
+        // let dataArr = numArr.reverse()
         // 没有记录添加记录
-        if (dataArr.length === 0) {
-          let arrOne = dataArr.concat(data)
-          let arrTwo = arrOne.reverse()
-          let arrp = this.unique(arrTwo)
-          this.setCookie('customer', JSON.stringify(arrp))
-        }
+        // if (dataArr.length === 0) {
+          // let arrOne = dataArr.concat(data)
+          // let arrTwo = arrOne.reverse()
+        numArr.unshift(data)
+        let arrp = this.unique(numArr)
+        this.setLocal('customer', JSON.stringify(arrp))
+        console.log('msg')
+        console.log(arrp)
+        // }
         // 判断是否重复
-        for (let i = 0; i < dataArr.length; i++) {
-          if (dataArr[i].adsid !== data.adsid) {
-            let arrOne = dataArr.concat(data)
-            let arrTwo = arrOne.reverse()
-            let arrp = this.unique(arrTwo)
-            this.setCookie('customer', JSON.stringify(arrp))
-          }
-        }
+        // for (let i = 0; i < dataArr.length; i++) {
+        //   if (dataArr[i].adsid !== data.adsid) {
+        //     let arrOne = dataArr.concat(data)
+        //     let arrTwo = arrOne.reverse()
+        //     let arrp = this.unique(arrTwo)
+        //     this.setCookie('customer', JSON.stringify(arrp))
+        //   }
+        // }
       } else {
-        let dataArr = numArr.reverse()
-        for (let i = 0; i < dataArr.length; i++) {
-          console.log(dataArr[i].adsid)
-          let arrOne = dataArr.concat(data)
-          let arrTwo = arrOne.reverse()
-          let arrp = this.unique(arrTwo.pop())
-          this.setCookie('customer', JSON.stringify(arrp))
-        }
+        numArr.unshift(data)
+        let arrp = this.unique(numArr).slice(0, 3)
+        this.setLocal('customer', JSON.stringify(arrp))
+        // let dataArr = numArr.reverse()
+        // for (let i = 0; i < dataArr.length; i++) {
+        //   console.log(dataArr[i].adsid)
+        //   let arrOne = dataArr.concat(data)
+        //   let arrTwo = arrOne.reverse()
+        //   let arrp = this.unique(arrTwo.pop())
+        //   this.setCookie('customer', JSON.stringify(arrp))
+        // }
       }
       // console.log(url)
       // return false
