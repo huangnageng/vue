@@ -14,7 +14,7 @@
         </div>
       </div>
       <!-- 广告位置 -->
-      <div class="ads-box">
+      <div class="ads-box sm-ad-box">
         <ins class="adsbygoogle"
         style="display:inline-block;width:320px;height:100px"
         data-ad-client="ca-pub-3545063517335060"
@@ -23,7 +23,7 @@
       <a @click ="linkClick(modeData.clickUrl)" :data-href="modeData.clickUrl|opUrl" class="play-btn">Play Now</a>
       
       <!-- 广告位置 -->
-      <div class="ads-box">
+      <div class="ads-box sm-ad-box">
         <ins class="adsbygoogle"
         style="display:inline-block;width:320px;height:100px"
         data-ad-client="ca-pub-3545063517335060"
@@ -36,7 +36,7 @@
       </div>
        
       <!-- 广告位置 -->
-      <div class="ads-box">
+      <div class="ads-box sm-ad-box">
         <ins class="adsbygoogle"
      style="display:inline-block;width:320px;height:100px"
      data-ad-client="ca-pub-3545063517335060"

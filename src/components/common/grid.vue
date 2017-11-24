@@ -130,7 +130,7 @@ export default {
       let arr = akidList
       let id = String(data.adsid)
       let numArr = this.getCookie('customer') ? JSON.parse(this.getCookie('customer')) : []
-      let url = (arr.indexOf(id) !== -1) ? 'home.html?gid=' + data.adsid : data.clickUrl
+      let url = (arr.indexOf(id) !== -1) ? '/module/home.html?gid=' + data.adsid : data.clickUrl
       if (this.indexGa) {
         this.clickGame(data.name)
       }
@@ -185,14 +185,19 @@ export default {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
       .grid-a:nth-child(3n+2){
         margin: 0 .86rem;
       }
       .grid-a {
         width: 2.66rem;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
         flex: 0 0 auto;
         padding: .2rem 0;
-        display: flex;
+        display: inline-block;
+        font-size: 0;
         flex-direction: column;
         align-items: center;
         .grid-icon {

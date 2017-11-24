@@ -8,9 +8,9 @@
         <span class="mode-title">Home</span>
       </div>
     </x-header>
-    <div class="main-box">
-    <view-box ref="viewBox" body-padding-top="1.5rem" body-padding-bottom="0">
-      <div class="content-box">
+    <div class="main-box" >
+    <view-box ref="viewBox"  body-padding-top="1.5rem" body-padding-bottom="0">
+      <div class="content-box" style="overflow-x:hidden;">
         <mode-tpl :modeData ="setData"></mode-tpl>
       
         <!-- 广告位置 -->
@@ -261,7 +261,7 @@ export default {
       })
     },
     back () {
-      window.location.href = 'index.html'
+      window.location.href = '/module/index.html'
     }
   }
 }

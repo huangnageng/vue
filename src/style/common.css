@@ -77,6 +77,16 @@ li {
   margin: .4rem  0;
   text-align: center;
 }
+@media screen and (max-width: 320px) {
+  .ads-box {
+    margin-left: -0.24rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .ads-box.sm-ad-box {
+    margin-left: -0.54rem;
+  }
+}
 .weui-toast {
   width: 3.6em;
   min-height: 3.6em;

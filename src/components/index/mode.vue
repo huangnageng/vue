@@ -111,5 +111,5 @@ export default {
   @import '../../style/common.less';
   @import '~vux/src/styles/1px.less';
   @import '~vux/src/styles/close.less';
-
+  
 </style>
