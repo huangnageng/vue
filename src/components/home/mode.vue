@@ -69,6 +69,7 @@ switch (gid) {
       dec: 'Take your seat in your own submarine and swim through a beautiful underwater world in this all new and mega fun endless game with many cool features! Enjoy intuitive submarine controls by lifting your finger to sink down and touching the display to let it rise up again. Along your exciting adventure try to collect as many coins and fun power-ups as possible to buy powerful upgrades! Your ultimate goal is to transform your basic submarine into a high tech one! This fun and exciting game is all about speed and your hand eye skill. Get ready to explore the ocean, but be aware of enemy rockets, dangerous rocks and other obstacles!',
       ads: [1812406949, 7994671911, 8572599871, 2550773543]
     }
+    document.title = 'Submarine Dash'
     break
   case 'spy chase':
     break
@@ -86,6 +87,7 @@ switch (gid) {
       dec: 'You run across the city in a car chase with the police officers. Collect repair items from the street to fix your damaged car but avoid other cars and roadblocks at all cost or the police wil get you!',
       ads: [9032303870, 9312374046, 1919262897, 7722431521]
     }
+    document.title = 'GTC Heat City'
     break
   case 'heat city':
     window.ga('create', 'UA-104413806-6', 'auto')
@@ -116,9 +118,10 @@ switch (gid) {
       dec: 'Free the Ball is a simple yet highly addictive unblock puzzle game that will keep you hooked to the screen for a long time. In this fantastic brain teaser game your goal is to create a path for the ball to reach the goal by sliding blocks. To keep you entertained for months Free The Ball features not less than three thousand levels. Yes, we are not kidding you - three thousand levels and all of them are completely free without any purchases. Are you ready to take the challenge to solve each and every of these tricky puzzles? Play Free The Ball now and enjoy endless hours of entertainment!',
       ads: [2519925903, 9716546181, 2442413591, 3665486612]
     }
+    document.title = 'Heat City'
     break
   case '15857184':
-    window.ga('create', 'UA-104413806-9', 'auto')
+    window.ga('create', 'UA-104413806-5', 'auto')
     window.ga('send', 'pageview')
     setData = {
       banner_1: 'http://www.dailyluck.net/epicrun/resource/img/preview1.png',
@@ -127,10 +130,11 @@ switch (gid) {
       description: 'Time for a legendary runner: Epic Run!',
       icon: 'http://www.dailyluck.net/epicrun/resource/img/icon.png',
       rate: 45,
-      name: ' Epic Run',
+      name: 'Epic Run',
       dec: 'Get ready to have the most epic run! Get an exhilarating running, escape deadly traps and shifts and make your way to victory in this amazingly addictive runner! Enjoy this fast-paced skill game with amazing graphics! Be careful, it is easy to play but hard to master! If you are ready for a fun challenge in a mysterious island, Epic Run is tailored for you! Do not worry, you will get plenty of support with gifts and boosters along the way! How far can you run?',
-      ads: [4659590816, 1191953243, 1930319840, 6994944263]
+      ads: [9527245431, 7093541836, 3154296822, 3700203682]
     }
+    document.title = 'Epic Run'
     break
   case 'doodle jump online':
     break
@@ -148,6 +152,7 @@ switch (gid) {
       dec: "Help the Crazy Birds to defend themselves! The pigs want to expel the birdies from their own land and did set up fortresses already. But these birds wouldn't be known as Crazy Birds, if some walls could hold them back! Whether it's wood or stone, for those birdies it doesn't matter, as they just dive into the walls head first and crush them. And if they fail there always even crazier birds to follow. Use the different abilities of the crazy birds to defeat the army of enemy pigs. Set up the slingshot and get ready to aim, shoot and destroy all the enemy structures and angry pigs.",
       ads: [8346219229, 5205050562, 1864571359, 4758150395]
     }
+    document.title = 'Crazy Birds'
     break
   case 'cookie crush 4':
     window.ga('create', 'UA-104413806-2', 'auto')
@@ -163,6 +168,7 @@ switch (gid) {
       dec: "You have to combine at least three delicious cookies to make them vanish from the field. If you manage to combine even more cookies at the same time, you will be rewarded with tons of points and of course with cool extras that can for instance wipe a whole line of sweets or make all cookies of a certain color vanish. Don't rush your moves and always keep an eye on your score as the turn limit is challenging and somtimes you need to plan a few moves ahead. Play Cookie Crush now for free and enjoy the cookies.",
       ads: [3352056599, 8828137806, 2038974296, 7515055503]
     }
+    document.title = 'Cookie Crush'
     break
   case '15750452':
     window.ga('create', 'UA-104413806-2', 'auto')
@@ -178,6 +184,7 @@ switch (gid) {
       dec: "You have to combine at least three delicious cookies to make them vanish from the field. If you manage to combine even more cookies at the same time, you will be rewarded with tons of points and of course with cool extras that can for instance wipe a whole line of sweets or make all cookies of a certain color vanish. Don't rush your moves and always keep an eye on your score as the turn limit is challenging and somtimes you need to plan a few moves ahead. Play Cookie Crush now for free and enjoy the cookies.",
       ads: [3352056599, 8828137806, 2038974296, 7515055503]
     }
+    document.title = 'Cookie Crush'
     break
   case '16070450':
     window.ga('create', 'UA-104413806-9', 'auto')
@@ -193,6 +200,7 @@ switch (gid) {
       dec: 'Defend your village against zombie hordes using bombs, springs and shields! Earn money during each level and invest it wisely to buy new weapons and armor. Will you be able to stop the invasion?',
       ads: [4659590816, 1191953243, 1930319840, 6994944263]
     }
+    document.title = 'Bombs and Zombies'
     break
   case '16992852':
     window.ga('create', 'UA-104413806-12', 'auto')
@@ -208,6 +216,7 @@ switch (gid) {
       dec: 'Get into the seat of your Block Racer, rev up the engine and and try to avoid all the obstacles in this cool racing game! The retro style 8bit graphics and the fast gameplay will keep you playing for hours and hours, trying to beat your best distance. On you way you can collect coins that later can be used to unlock new cars or to continue the game after a mistake. The decision is yours, will you take a risk to collect the coins or will you play it safe to continue? Play Block Racer now for free and go as far and as fast as you can!',
       ads: [5666801133, 4506774464, 7296589339, 6338730889]
     }
+    document.title = 'Block Racer'
     break
   case 'basketball hoops':
     break

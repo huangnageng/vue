@@ -69,11 +69,16 @@ export default {
       let pageLoadTime = new Date().getTime()
       return this.GetMain().then(res => {
         if (res.status === 200) {
-          console.log(res)
           if (this.cookieData.length > 0) {
             if (this.cookieData.length < 3) {
+              console.log(this.cookieData)
               // this.list = this.cookieData.concat(res.data.likes).slice(0, 3)
-              let ard = this.unique(this.cookieData.concat(res.data.likes))
+              let dataArr = this.cookieData
+              for (var i = 0; i < res.data.likes.length; i++) {
+                dataArr.push(res.data.likes[i])
+              }
+              // let ard = this.unique(dataArr)
+              let ard = this.uniqueArr(dataArr)
               this.list = ard.slice(0, 3)
             } else {
               this.list = this.cookieData
@@ -102,6 +107,9 @@ export default {
         res.push(askArr[i])
       }
       return res
+    },
+    uniqueArr (array) {
+      // Array.from(new Set(array))
     }
   }
 }

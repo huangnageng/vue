@@ -116,7 +116,6 @@ export default {
         for (var j = i + 1; j < len; j++) {
           // 如果发现相同元素
           // 则 i 自增进入下一个循环比较
-          console.log(askArr[i].adsid)
           if (askArr[i].adsid === askArr[j].adsid) {
             j = ++i
           }
@@ -134,42 +133,36 @@ export default {
       if (this.indexGa) {
         this.clickGame(data.name)
       }
+      let arrp = []
       // 记录小于3个
       if (numArr.length < 3) {
-        // let dataArr = numArr.reverse()
-        // 没有记录添加记录
-        // if (dataArr.length === 0) {
-          // let arrOne = dataArr.concat(data)
-          // let arrTwo = arrOne.reverse()
         numArr.unshift(data)
-        let arrp = this.unique(numArr)
-        this.setLocal('customer', JSON.stringify(arrp))
-        console.log('msg')
-        console.log(arrp)
-        // }
-        // 判断是否重复
-        // for (let i = 0; i < dataArr.length; i++) {
-        //   if (dataArr[i].adsid !== data.adsid) {
-        //     let arrOne = dataArr.concat(data)
-        //     let arrTwo = arrOne.reverse()
-        //     let arrp = this.unique(arrTwo)
-        //     this.setCookie('customer', JSON.stringify(arrp))
-        //   }
-        // }
+        arrp = this.unique(numArr)
+        // this.setLocal('customer', JSON.stringify(arrp))
       } else {
         numArr.unshift(data)
-        let arrp = this.unique(numArr).slice(0, 3)
-        this.setLocal('customer', JSON.stringify(arrp))
-        // let dataArr = numArr.reverse()
-        // for (let i = 0; i < dataArr.length; i++) {
-        //   console.log(dataArr[i].adsid)
-        //   let arrOne = dataArr.concat(data)
-        //   let arrTwo = arrOne.reverse()
-        //   let arrp = this.unique(arrTwo.pop())
-        //   this.setCookie('customer', JSON.stringify(arrp))
+        arrp = this.unique(numArr).slice(0, 3)
+        // this.setLocal('customer', JSON.stringify(arrp))
+      }
+      // let nArr = []
+      let dArr = []
+      for (let n = 0; n < arrp.length; n++) {
+        if (data.adsid !== arrp[n].adsid) {
+          dArr.push(arrp[n])
+          // console.log()
+          // console.log(aArr)
+          // if (leg && leg.length >= 1) {
+          //   aArr.unshift(leg[0])
+          // }
+          // console.log(aArr)
+        }
+          // console.log(aArr)
+          // aArr.unshift(data)
         // }
       }
-      // console.log(url)
+      dArr.unshift(data)
+      this.setLocal('customer', JSON.stringify(dArr))
+      console.log(url)
       // return false
       window.location.href = url
     }
