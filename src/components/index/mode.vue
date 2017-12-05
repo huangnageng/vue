@@ -114,11 +114,9 @@ export default {
       for (var i = 0; i < arr.length; i++) {
         r['arr' + arr[i].adsid + 'id'] = arr[i]
       }
-      console.log(r)
       for (var j in r) {
         ars.push(r[j])
       }
-      console.log(ars)
       return ars
     }
   }

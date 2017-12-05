@@ -17,7 +17,7 @@
       <div class="ads-box sm-ad-box">
         <ins class="adsbygoogle"
         style="display:inline-block;width:320px;height:100px"
-        data-ad-client="ca-pub-3545063517335060"
+        :data-ad-client="modeData['capId']"
         :data-ad-slot="modeData['ads']?modeData['ads'][0]:''"></ins>
       </div>
       <a @click ="linkClick(modeData.clickUrl)" :data-href="modeData.clickUrl|opUrl" class="play-btn">Play Now</a>
@@ -26,7 +26,7 @@
       <div class="ads-box sm-ad-box">
         <ins class="adsbygoogle"
         style="display:inline-block;width:320px;height:100px"
-        data-ad-client="ca-pub-3545063517335060"
+        :data-ad-client="modeData['capId']"
         :data-ad-slot="modeData['ads']?modeData['ads'][1]:''"></ins>
       </div>
       <div class="tpl-tipText">{{modeData.description}}</div>
@@ -39,7 +39,7 @@
       <div class="ads-box sm-ad-box">
         <ins class="adsbygoogle"
      style="display:inline-block;width:320px;height:100px"
-     data-ad-client="ca-pub-3545063517335060"
+     :data-ad-client="modeData['capId']"
      :data-ad-slot="modeData['ads']?modeData['ads'][2]:''"></ins>
       </div>
        <div class="play-content">
