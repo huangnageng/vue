@@ -39,6 +39,8 @@ export default {
   components: {
     XHeader, ViewBox, CmmGrid
   },
+  updated () {
+  },
   created () {
     this.modeRequire()
   },

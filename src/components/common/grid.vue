@@ -14,22 +14,7 @@
 </template>
 
 <script>
-// var akidList = [
-//   'submarine dash',
-//   'spy chase',
-//   'gtc heat city',
-//   'heat city',
-//   'free the ball',
-//   'epic run',
-//   'doodle jump online',
-//   'crazy birds',
-//   'bombs and zombies',
-//   'cookie crush 2',
-//   'cookie crush',
-//   'cookie crush 4',
-//   'block racer',
-//   'basketball hoops'
-// ]
+
 var akidList = [
   '15973391',
   'spy chase',
@@ -48,14 +33,6 @@ var akidList = [
 ]
 export default {
   name: 'Grid',
-  filters: {
-    double (e, id, name) {
-      // let hostname = location.hostname
-      // let patt = new RegExp(hostname + '?')
-      // let arr = akidList
-      // return arr.indexOf(name.toLowerCase()) !== -1 ? '/module/home.html?gid=' + id + '&games=' + name : e
-    }
-  },
   computed: {
   },
   props: {
