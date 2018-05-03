@@ -28,20 +28,10 @@ export default {
 </script>
 
 <style lang='less'>
-  @import '../style/common.less';
+
   @import '~vux/src/styles/1px.less';
   @import '~vux/src/styles/close.less';
-  .header-title{
-    z-index:2;
-    height: 1.5rem;
-    .vux-header-title {
-      height:100%!important;
-      display:flex;
-      align-items: center;
-      justify-content: center; 
-      font-size: .52rem!important;
-    }
-  }
+  @import '../style/common.less';
   .main-box {
     background: #EBEBEB;
     position: absolute;

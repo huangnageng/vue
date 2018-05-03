@@ -90,10 +90,12 @@ let originalConfig  = {
     ]
   }
 }
+// 配置vux的
 const webpackConfig = originalConfig 
-module.exports = vuxLoader.merge(webpackConfig, {
-  plugins: ['vux-ui',{
-    name: 'less-theme',
-    path: 'src/style/theme.less'
-  }]
-})
+// module.exports = vuxLoader.merge(webpackConfig, {
+//   plugins: ['vux-ui',{
+//     name: 'less-theme',
+//     path: 'src/style/theme.less'
+//   }]
+// })
+module.exports = webpackConfig

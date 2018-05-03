@@ -2,7 +2,7 @@ import Vue from 'vue'
 import router from '../../router/router.js'
 import comm from '@/api/comm.js'
 import store from '../../store'
-import App from '../../components/home/mode.vue'
+import App from '../../components/filter/mode.vue'
 import YDUI from 'vue-ydui'
 import 'vue-ydui/dist/ydui.rem.css'
 
